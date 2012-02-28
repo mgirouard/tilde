@@ -1,8 +1,14 @@
 " ========================================================================= 
-" # Shortcuts
+" # Initialization
 " ========================================================================= 
 
+set nocompatible
+call pathogen#infect()
 let mapleader = ","
+
+" ========================================================================= 
+" # Shortcuts
+" ========================================================================= 
 
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
@@ -21,20 +27,11 @@ nmap <Leader>sj :rightbelow sp \| enew<CR>
 nmap <Leader>sh :vsp \| enew<CR>
 nmap <Leader>sl :rightbelow vsp \| enew<CR>
 
-" Split navigation
+" Jump to Current working directory
+nmap <Leader>. :Rexplore<CR>
 
-nmap <Leader>l <C-w>l
-nmap <Leader>h <C-w>h
-nmap <Leader>k <C-w>k
-nmap <Leader>j <C-w>j
-
-" Tab navigation
-nmap <Leader>tn :tabnext<CR>
-nmap <Leader>tp :tabprev<CR>
-
-" Buffer navigation
-nmap <Leader>bn :bnext<CR>
-nmap <Leader>bp :bprev<CR>
+" Show hidden chars
+nmap <Leader>l :set list!<CR>
 
 " Pasting (Ctrl+v is baked into my muscle memory)
 imap <C-v> <C-o>"+gP
@@ -62,7 +59,11 @@ set nowrap
 set nu
 set showmode
 set ruler
-set backspace=2
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
 
 " Insure Clean Pasting w/autoindented code
 nnoremap <F2> :set invpaste paste?<CR>
@@ -70,17 +71,19 @@ set pastetoggle=<F2>
 
 " Backup files are for the weak
 set nobackup
-set nowritebackup 
+set nowritebackup
 
 " ========================================================================= 
 " # Syntax
 " ========================================================================= 
 
 syntax on
-filetype indent on
+filetype plugin indent on
 set showmatch
 setlocal foldmethod=syntax
+set foldlevel=1
 let php_folding = 1
+let javaScript_fold=1
 
 " ========================================================================= 
 " # Specific filetypes
@@ -88,6 +91,7 @@ let php_folding = 1
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead *.phtml set filetype=php
+autocmd BufNewFile,BufRead *.js set foldlevel=0
 
 " ========================================================================= 
 " # Colors
@@ -117,14 +121,5 @@ elseif has('unix')
     cmap w!! %!sudo tee > /dev/null %
 elseif has('win32')
     set guifont=Consolas:h10
+    set backspace=2
 endif
-
-" ========================================================================= 
-" # Netrw Stuff
-" ========================================================================= 
-
-let g:netrw_alto              = 1   " Horiz split under
-let g:netrw_altv              = 2   " Vert split right
-let g:netrw_browse_split      = 2   " Vert split on <cr>
-let g:netrw_liststyle         = 3   " Tree View
-let g:netrw_winsize           = 30  " 30 column width 
