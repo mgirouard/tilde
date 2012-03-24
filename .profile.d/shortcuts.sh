@@ -9,4 +9,4 @@ alias ll='ls -la'
 alias vi=vim
 
 # User Scripts
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
