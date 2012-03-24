@@ -30,8 +30,18 @@ nmap <Leader>sl :rightbelow vsp \| enew<CR>
 " Jump to Current working directory
 nmap <Leader>. :Rexplore<CR>
 
-" Show hidden chars
+" Toggle hidden chars
 nmap <Leader>l :set list!<CR>
+
+" Toggle line wrapping
+nmap <Leader>w :set wrap!<CR>
+
+" Toggle line numbers
+nmap <Leader>n :set nu!<CR>
+
+" .vimrc Helpers
+nmap <Leader>er :tabnew ~/.vimrc<CR>
+nmap <Leader>sr :source ~/.vimrc<CR>
 
 " Pasting (Ctrl+v is baked into my muscle memory)
 imap <C-v> <C-o>"+gP
