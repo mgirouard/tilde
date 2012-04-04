@@ -102,6 +102,7 @@ let javaScript_fold=1
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead *.phtml set filetype=php
 autocmd BufNewFile,BufRead *.js set foldlevel=0
+autocmd BufNewFile,BufRead *.markdown set linebreak wrap
 
 " ========================================================================= 
 " # Colors
