@@ -3,8 +3,8 @@
 " ========================================================================= 
 
 set nocompatible
-call pathogen#infect()
 let mapleader = ","
+silent! call pathogen#infect()
 
 " ========================================================================= 
 " # Shortcuts
@@ -108,7 +108,11 @@ autocmd BufNewFile,BufRead *.markdown set linebreak wrap
 " # Colors
 " ========================================================================= 
 
-colorscheme slate
+try
+    colorscheme vividchalk
+catch
+    colorscheme slate
+endtry
 
 " ========================================================================= 
 " # Mouse behavior
@@ -127,7 +131,7 @@ if has('gui_running')
 endif
 
 if has('mac')
-    set guifont=Monaco:h12
+    set guifont=Monaco:h11
     set transparency=20
 elseif has('unix')
     cmap w!! %!sudo tee > /dev/null %
