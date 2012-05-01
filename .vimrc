@@ -127,7 +127,7 @@ if has('gui_running')
 endif
 
 if has('mac')
-    set guifont=Monaco:h12
+    set guifont=Monaco:h11
     set transparency=20
 elseif has('unix')
     cmap w!! %!sudo tee > /dev/null %
