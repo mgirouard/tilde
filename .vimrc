@@ -121,7 +121,10 @@ let php_folding = 1
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead *.phtml set filetype=php
 autocmd BufNewFile,BufRead *.js set foldlevel=0
-autocmd BufNewFile,BufRead *.markdown set linebreak wrap
+
+" Markdown
+" Partially ripped from the macvim `filetype.vim`
+autocmd BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md setf markdown | set linebreak wrap
 
 " ========================================================================= 
 " # Colors
