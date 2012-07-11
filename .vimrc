@@ -10,6 +10,13 @@ silent! call pathogen#infect()
 " # Shortcuts
 " ========================================================================= 
 
+" I shouldn't have to do this, but for some reason navigating up 
+" directories in Netrw will cause a window to have `nomodifiable` and 
+" `readonly` set. 
+"
+" I'm guessing it's inheriting those properties from the Netrw window.
+nmap <Leader>! :set modifiable noreadonly<CR>
+
 " Exit insert mode without a manual <ESC> or <C-C>
 imap <Leader><Leader> <ESC>l
 
