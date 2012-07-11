@@ -48,6 +48,9 @@ nmap <Leader>sl :rightbelow vsp \| Explore<CR>
 " Jump to Current working directory
 nmap <Leader>. :e .<CR>
 
+" Jump to Current working directory
+nmap - :Explore<CR>
+
 " Toggle hidden chars
 nmap <Leader>l :set list!<CR>
 
