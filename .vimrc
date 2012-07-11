@@ -40,10 +40,10 @@ nmap <Leader>Mh :set lines=999<CR>
 nmap <Leader>MM <Leader>Mw<Leader>Mh
 
 " Split up/down/left/right
-nmap <Leader>sk :sp \| enew<CR>
-nmap <Leader>sj :rightbelow sp \| enew<CR>
-nmap <Leader>sh :vsp \| enew<CR>
-nmap <Leader>sl :rightbelow vsp \| enew<CR>
+nmap <Leader>sk :sp \| Explore<CR>
+nmap <Leader>sj :rightbelow sp \| Explore<CR>
+nmap <Leader>sh :vsp \| Explore<CR>
+nmap <Leader>sl :rightbelow vsp \| Explore<CR>
 
 " Jump to Current working directory
 nmap <Leader>. :Rexplore<CR>
