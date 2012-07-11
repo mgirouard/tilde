@@ -6,7 +6,8 @@
 # Command Aliases
 alias ls='ls -G'
 alias ll='ls -la'
-alias vi=vim
+alias vi='vim'
+alias v='vim .'
 
 # Generic "Go to" shortcut with some bonus conveniences
 function gt () 
