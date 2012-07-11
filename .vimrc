@@ -113,7 +113,6 @@ set showmatch
 setlocal foldmethod=syntax
 set foldlevel=1
 let php_folding = 1
-let javaScript_fold=1
 
 " ========================================================================= 
 " # Specific filetypes
