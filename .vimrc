@@ -154,7 +154,6 @@ endif
 
 if has('mac')
     set guifont=Monaco:h11
-    set transparency=20
 elseif has('unix')
     cmap w!! %!sudo tee > /dev/null %
 elseif has('win32')
