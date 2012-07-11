@@ -23,6 +23,8 @@ alias gb='popd > /dev/null'
 # Common Paths
 export PROJECTS=$HOME/Documents/Projects
 export VENDORS=$HOME/Documents/Vendors
+export SITES=$HOME/Sites
+export PROFILE=$HOME/.profile.d
 
 # User Scripts
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
