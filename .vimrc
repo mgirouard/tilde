@@ -64,12 +64,11 @@ nmap <Leader>n :set nu!<CR>
 nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
 
-" Pasting (Ctrl+v is baked into my muscle memory)
-imap <C-v> <C-o>"+gP
-vmap <C-v> "+gP
-
-" Copying (Ctrl+c is too...)
-vmap <C-c> "+y
+" Copy/pasting (via mswin.vim)
+" vnoremap <C-X> "+x
+" vnoremap <C-C> "+y
+" map <C-V> "+gP
+" cmap <C-V> <C-R>+
 
 " ========================================================================= 
 " # Indentation
