@@ -10,6 +10,24 @@ silent! call pathogen#infect()
 " # Shortcuts
 " ========================================================================= 
 
+" Exit insert mode without a manual <ESC> or <C-C>
+imap <Leader><Leader> <ESC>l
+
+" Quit the current window
+nmap <Leader>q :q<CR>
+
+" Delete the current buffer
+nmap <Leader>d :bd<CR>
+
+" Show a list of all open buffers
+nmap <Leader>b :ls<CR>
+
+" Jump from window to window
+nmap <Leader><Tab> <C-W>w
+
+" Jump from tab to tab
+nmap <Leader><S-Tab> :tabn<CR>
+
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
 nmap <Leader>mh <C-W>_
