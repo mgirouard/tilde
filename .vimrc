@@ -1,21 +1,23 @@
+" Mike G's Super Amazing .vimrc
 " ========================================================================= 
-" # Initialization
-" ========================================================================= 
+" More fun to be had at http://www.github.com/mgirouard/Dots
+
+" Initialization
+" ------------------------------------------------------------------------- 
 
 set nocompatible
 let mapleader = ","
 silent! call pathogen#infect()
 
-" ========================================================================= 
 " # Shortcuts
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 " I shouldn't have to do this, but for some reason navigating up 
 " directories in Netrw will cause a window to have `nomodifiable` and 
-" `readonly` set. 
+" `readonly` set. It also drops line numbers.
 "
 " I'm guessing it's inheriting those properties from the Netrw window.
-nmap <Leader>! :set modifiable noreadonly<CR>
+nmap <Leader>! :set nu modifiable noreadonly<CR>
 
 " Exit insert mode without a manual <ESC> or <C-C>
 imap <Leader><Leader> <ESC>l
@@ -77,9 +79,8 @@ nmap <Leader>sr :source ~/.vimrc<CR>
 " map <C-V> "+gP
 " cmap <C-V> <C-R>+
 
-" ========================================================================= 
 " # Indentation
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 set shiftwidth=4
 set softtabstop=4
@@ -88,9 +89,8 @@ set expandtab
 set autoindent
 set cindent
 
-" ========================================================================= 
 " # Editor Behavior
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 set nowrap
 set nu
@@ -110,9 +110,8 @@ set pastetoggle=<F2>
 set nobackup
 set nowritebackup
 
-" ========================================================================= 
 " # Syntax
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 syntax on
 filetype plugin indent on
@@ -121,21 +120,19 @@ setlocal foldmethod=syntax
 set foldlevel=1
 let php_folding = 1
 
-" ========================================================================= 
 " # Specific filetypes
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
-autocmd BufNewFile,BufRead *.phtml set filetype=php
+autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php
 autocmd BufNewFile,BufRead *.js set foldlevel=0
 
 " Markdown
 " Partially ripped from the macvim `filetype.vim`
 autocmd BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md setf markdown | set linebreak wrap
 
-" ========================================================================= 
 " # Colors
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 try
     colorscheme vividchalk
@@ -143,17 +140,15 @@ catch
     colorscheme slate
 endtry
 
-" ========================================================================= 
 " # Mouse behavior
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 if has('mouse')
     set mouse=a
 endif
 
-" ========================================================================= 
 " # GUI only stuff
-" ========================================================================= 
+" ------------------------------------------------------------------------- 
 
 if has('gui_running')
     set guioptions=gt
