@@ -9,7 +9,7 @@ set nocompatible
 let mapleader = ","
 silent! call pathogen#infect()
 
-" # Shortcuts
+" Shortcuts
 " ------------------------------------------------------------------------- 
 
 " Exit insert mode without a manual <ESC> or <C-C>
@@ -20,6 +20,8 @@ nmap <Leader>q :q<CR>
 
 " Delete the current buffer
 nmap <Leader>d :bd<CR>
+
+" Quickly switch buffers (prev/next)
 nmap <C-P> :bp<CR>
 nmap <C-N> :bp<CR>
 
@@ -74,7 +76,7 @@ nmap <Leader>sr :source ~/.vimrc<CR>
 " map <C-V> "+gP
 " cmap <C-V> <C-R>+
 
-" # Indentation
+" Indentation
 " ------------------------------------------------------------------------- 
 
 set shiftwidth=4
@@ -84,7 +86,7 @@ set expandtab
 set autoindent
 set cindent
 
-" # Editor Behavior
+" Editor Behavior
 " ------------------------------------------------------------------------- 
 
 set nowrap
@@ -105,7 +107,7 @@ set pastetoggle=<F2>
 set nobackup
 set nowritebackup
 
-" # Syntax
+" Syntax
 " ------------------------------------------------------------------------- 
 
 syntax on
@@ -115,7 +117,7 @@ setlocal foldmethod=syntax
 set foldlevel=1
 let php_folding = 1
 
-" # Specific filetypes
+" Specific filetypes
 " ------------------------------------------------------------------------- 
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
@@ -126,7 +128,7 @@ autocmd BufNewFile,BufRead *.js set foldlevel=0
 " Partially ripped from the macvim `filetype.vim`
 autocmd BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md setf markdown | set linebreak wrap
 
-" # Colors
+" Colors
 " ------------------------------------------------------------------------- 
 
 try
@@ -135,14 +137,14 @@ catch
     colorscheme slate
 endtry
 
-" # Mouse behavior
+" Mouse behavior
 " ------------------------------------------------------------------------- 
 
 if has('mouse')
     set mouse=a
 endif
 
-" # GUI only stuff
+" GUI only stuff
 " ------------------------------------------------------------------------- 
 
 if has('gui_running')
