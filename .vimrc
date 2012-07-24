@@ -27,6 +27,8 @@ nmap <Leader>q :q<CR>
 
 " Delete the current buffer
 nmap <Leader>d :bd<CR>
+nmap <C-P> :bp<CR>
+nmap <C-N> :bp<CR>
 
 " Show a list of all open buffers
 nmap <Leader>b :ls<CR>
