@@ -160,9 +160,16 @@ endif
 " Workarounds and bug fixes
 " ------------------------------------------------------------------------- 
 
+" Set a window's attributes back to normal after NetRw borks them
+"
 " I shouldn't have to do this, but for some reason navigating up 
 " directories in Netrw will cause a window to have `nomodifiable` and 
 " `readonly` set. It also drops line numbers.
 "
 " I'm guessing it's inheriting those properties from the Netrw window.
 nmap <Leader>! :set nu modifiable noreadonly<CR>
+
+" Close all folds except for the current one
+"
+" This is useful when folds toggle open when adjusting strings or brackets
+nmap <Leader>O zrzmzo
