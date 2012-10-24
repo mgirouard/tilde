@@ -129,6 +129,9 @@ autocmd BufNewFile,BufRead *.js set foldlevel=0
 " Partially ripped from the macvim `filetype.vim`
 autocmd BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md setf markdown | set linebreak wrap
 
+autocmd FileType java setlocal noexpandtab softtabstop=0
+autocmd FileType xml setlocal noexpandtab softtabstop=0
+
 " Colors
 " ------------------------------------------------------------------------- 
 
