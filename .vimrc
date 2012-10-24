@@ -16,7 +16,7 @@ silent! call pathogen#infect()
 imap <Leader><Leader> <ESC>l
 
 " Quit the current window
-nmap <Leader>q :q<CR>
+nmap <Leader>q :close<CR>
 
 " Delete the current buffer
 nmap <Leader>d :bd<CR>
