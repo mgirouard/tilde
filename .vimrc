@@ -98,6 +98,7 @@ set ruler
 set hlsearch
 set incsearch
 set ignorecase
+nmap <Leader>/ :silent!/thisisacheapwayofclearingthesearch<CR>
 
 " Insure Clean Pasting w/autoindented code
 nnoremap <F2> :set invpaste paste?<CR>
