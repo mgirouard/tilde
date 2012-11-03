@@ -124,10 +124,7 @@ let php_folding = 1
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=0
-
-" Markdown
-" Partially ripped from the macvim `filetype.vim`
-autocmd BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,README.md setf markdown | set linebreak wrap
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.mdown,*.mkd,*.mkdn,README* setf markdown | set linebreak wrap
 
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
