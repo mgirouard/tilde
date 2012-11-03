@@ -122,7 +122,7 @@ let php_folding = 1
 " ------------------------------------------------------------------------- 
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
-autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php
+autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=0
 
 " Markdown
