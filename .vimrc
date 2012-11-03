@@ -22,6 +22,17 @@ nmap <Leader>gb :Git checkout -b
 nmap <Leader>gm :Git merge --no-ff 
 nmap <Leader>gu :Git push 
 
+" Status Line
+" ------------------------------------------------------------------------- 
+" Inspired by spf13: https://github.com/spf13/spf13-vim/blob/master/.vimrc
+set laststatus=2
+set statusline=%n:
+set statusline+=%<%t\ 
+set statusline+=%w%h%m%r 
+set statusline+=%{fugitive#statusline()} 
+set statusline+=\ [%{&ff}/%Y] 
+set statusline+=%=%-14.(%l,%c%V%)\ %p%% 
+
 " Shortcuts
 " ------------------------------------------------------------------------- 
 
