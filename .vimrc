@@ -143,6 +143,7 @@ endtry
 
 if has('gui_running')
     set guioptions=gt
+    set colorcolumn=80
 endif
 
 if has('mac')
