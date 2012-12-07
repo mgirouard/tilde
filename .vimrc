@@ -153,6 +153,10 @@ autocmd BufNewFile,BufRead *.txt,*.markdown,*.mdown,*.mkd,*.mkdn,README* setf ma
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
 
+if expand('%:t') =~?'bash-fc-\d\+'
+  setfiletype sh
+endif
+
 " Colors
 " ------------------------------------------------------------------------- 
 
