@@ -4,3 +4,6 @@
 ##
 
 PS1='\[\033[1;36m\]\W\[\033[0m\] '
+
+# Behave like VI
+set -o vi
