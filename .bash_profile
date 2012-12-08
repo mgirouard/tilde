@@ -3,8 +3,8 @@
 # http://www.github.com/mgirouard/Dots
 ##
 
-for SCRIPT in `ls $HOME/.profile.d`; do
-    source "$HOME/.profile.d/$SCRIPT"
-done
+# Initialize login shell
+if [ -r ~/.profile ]; then . ~/.profile; fi
 
-[[ `which fortune` != "" ]] && echo && fortune && echo
+# Initialize interactive shell
+if [ -n "$PS1" -a -r ~/.bashrc ]; then . ~/.bashrc; fi
