@@ -31,7 +31,7 @@ set statusline+=%<%t\
 set statusline+=%w%h%m%r 
 set statusline+=%{fugitive#statusline()} 
 set statusline+=\ [%{&ff}/%Y] 
-set statusline+=%=%-14.(%l,%c%V%)\ %p%% 
+set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%% 
 
 " Shortcuts
 " ------------------------------------------------------------------------- 
