@@ -33,6 +33,12 @@ set statusline+=%{fugitive#statusline()}
 set statusline+=\ [%{&ff}/%Y] 
 set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%% 
 
+" Tabs
+" ------------------------------------------------------------------------- 
+nmap <Leader>tp :tabprevious<CR><ESC>
+nmap <Leader>tn :tabnext<CR><ESC>
+nmap <Leader>tN :tabnew<CR>
+
 " Shortcuts
 " ------------------------------------------------------------------------- 
 
