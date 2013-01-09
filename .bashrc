@@ -26,3 +26,6 @@ alias v='vim .'
 if [ -d ~/.bashrc.d ]; then
     for RC in `ls ~/.bashrc.d/*.sh`; do . $RC; done
 fi
+
+# Remember a lot of history
+HISTFILESIZE=10000
