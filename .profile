@@ -15,4 +15,4 @@ export EDITOR='vim'
 #export SVN_EDITOR='vim -f'
 
 # User Scripts
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$PATH:/usr/local/bin:/usr/local/sbin
