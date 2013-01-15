@@ -4,11 +4,15 @@
 
 " Initialization
 " ------------------------------------------------------------------------- 
-set t_Co=256
 set nocompatible
+set t_Co=256
 let mapleader = ","
-silent! call pathogen#infect()
 set cursorline
+
+" Pathogen (as a bundle)
+" ------------------------------------------------------------------------- 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+silent! call pathogen#infect()
 
 " Git
 " ------------------------------------------------------------------------- 
