@@ -13,6 +13,7 @@ set cursorline
 " ------------------------------------------------------------------------- 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
+Helptags
 
 " Git
 " ------------------------------------------------------------------------- 
