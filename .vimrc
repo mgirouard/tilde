@@ -19,11 +19,11 @@ Helptags
 " ------------------------------------------------------------------------- 
 " via Fugitive: https://github.com/tpope/vim-fugitive/
 nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gp :Git add -p<CR>
 nmap <Leader>gc :Git commit -v<CR>
 nmap <Leader>go :Git checkout 
-nmap <Leader>gb :Git checkout -b
 nmap <Leader>gm :Git merge --no-ff 
 nmap <Leader>gu :Git push 
 
