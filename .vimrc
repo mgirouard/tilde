@@ -49,15 +49,8 @@ nmap <Leader>tN :tabnew<CR>
 " Exit insert mode without a manual <ESC> or <C-C>
 imap <Leader><Leader> <ESC>l
 
-" Quit the current window
-nmap <Leader>q :close<CR>
-
 " Delete the current buffer
 nmap <Leader>d :bd<CR>
-
-" Quickly switch buffers (prev/next)
-nmap <C-P> :bp<CR>
-nmap <C-N> :bp<CR>
 
 " Show a list of all open buffers
 nmap <Leader>b :ls<CR>
@@ -78,12 +71,6 @@ nmap <Leader>mm <Leader>mw<Leader>mh
 nmap <Leader>Mw :set columns=999<CR>
 nmap <Leader>Mh :set lines=999<CR>
 nmap <Leader>MM <Leader>Mw<Leader>Mh
-
-" Split up/down/left/right
-nmap <Leader>sk :sp \| Explore<CR>
-nmap <Leader>sj :rightbelow sp \| Explore<CR>
-nmap <Leader>sh :vsp \| Explore<CR>
-nmap <Leader>sl :rightbelow vsp \| Explore<CR>
 
 " Jump to Current working directory
 nmap <Leader>. :e .<CR>
