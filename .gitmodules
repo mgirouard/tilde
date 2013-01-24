@@ -12,4 +12,4 @@
 	url = git://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/dwm"]
 	path = .vim/bundle/dwm
-	url = git://github.com/spolu/dwm.vim.git
+	url = git://github.com/mgirouard/dwm.vim.git
