@@ -13,9 +13,6 @@ if [ -r $GC ]; then . $GC; fi
 if [ $EUID -eq 0 ]; then PC=31; else PC=36; fi
 PS1="\[\033[1;"$PC"m\]\W\[\033[0m\] "
 
-# Behave like VI
-set -o vi
-
 # Aliases
 alias ls='ls -G'
 alias ll='ls -la'
