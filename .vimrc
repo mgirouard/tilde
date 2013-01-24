@@ -90,12 +90,6 @@ nmap <Leader>n :set nu!<CR>
 nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
 
-" Copy/pasting (via mswin.vim)
-" vnoremap <C-X> "+x
-" vnoremap <C-C> "+y
-" map <C-V> "+gP
-" cmap <C-V> <C-R>+
-
 " Indentation
 " ------------------------------------------------------------------------- 
 
