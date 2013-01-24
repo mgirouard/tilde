@@ -36,17 +36,13 @@ set statusline+=%{fugitive#statusline()}
 set statusline+=\ [%{&ff}/%Y] 
 set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%% 
 
-" Tabs
-" ------------------------------------------------------------------------- 
-nmap <Leader>tp :tabprevious<CR><ESC>
-nmap <Leader>tn :tabnext<CR><ESC>
-nmap <Leader>tN :tabnew<CR>
-
-" Shortcuts
+" Buffers
 " ------------------------------------------------------------------------- 
 
-" Exit insert mode without a manual <ESC> or <C-C>
-imap <Leader><Leader> <ESC>l
+" dwm.vim is installed so a <C-L> and <C-H> compliment the window 
+" navigation well
+nmap <C-L> :bn<CR>
+nmap <C-H> :bp<CR>
 
 " Delete the current buffer
 nmap <Leader>d :bd<CR>
@@ -54,11 +50,15 @@ nmap <Leader>d :bd<CR>
 " Show a list of all open buffers
 nmap <Leader>b :ls<CR>
 
-" Jump from window to window
-nmap <Leader><Tab> <C-W>w
+" Tabs
+" ------------------------------------------------------------------------- 
+nmap <C-Tab> :tabn<CR>
 
-" Jump from tab to tab
-nmap <Leader><S-Tab> :tabn<CR>
+" Shortcuts
+" ------------------------------------------------------------------------- 
+
+" Exit insert mode without a manual <ESC> or <C-C>
+imap <Leader><Leader> <ESC>l
 
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
