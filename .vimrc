@@ -7,7 +7,6 @@
 set nocompatible
 set t_Co=256
 let mapleader = ","
-set cursorline
 
 " Pathogen (as a bundle)
 " ------------------------------------------------------------------------- 
@@ -114,6 +113,7 @@ set nowrap
 set nu
 set showmode
 set ruler
+set cursorline
 
 " Searching
 set hlsearch
