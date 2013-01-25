@@ -1,0 +1,9 @@
+# Don't worry about case when completing paths
+set completion-ignore-case on
+
+# Behave like VI
+set editing-mode vi
+
+# Use current input as a base when searching history
+"\e[B": history-search-forward
+"\e[A": history-search-backward

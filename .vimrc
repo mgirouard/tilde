@@ -4,23 +4,26 @@
 
 " Initialization
 " ------------------------------------------------------------------------- 
-set t_Co=256
 set nocompatible
+set t_Co=256
 let mapleader = ","
+
+" Pathogen (as a bundle)
+" ------------------------------------------------------------------------- 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
-set cursorline
+Helptags
 
 " Git
 " ------------------------------------------------------------------------- 
 " via Fugitive: https://github.com/tpope/vim-fugitive/
 nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gp :Git add -p<CR>
 nmap <Leader>gc :Git commit -v<CR>
 nmap <Leader>go :Git checkout 
-nmap <Leader>gb :Git checkout -b
-nmap <Leader>gm :Git merge --no-ff 
-nmap <Leader>gu :Git push 
 
 " Status Line
 " ------------------------------------------------------------------------- 
@@ -31,32 +34,31 @@ set statusline+=%<%t\
 set statusline+=%w%h%m%r 
 set statusline+=%{fugitive#statusline()} 
 set statusline+=\ [%{&ff}/%Y] 
-set statusline+=%=%-14.(%l,%c%V%)\ %p%% 
+set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%% 
+
+" Buffers
+" ------------------------------------------------------------------------- 
+
+" dwm.vim is installed so a <C-L> and <C-H> compliment the window 
+" navigation well
+nmap <C-L> :bn<CR>
+nmap <C-H> :bp<CR>
+
+" Delete the current buffer
+nmap <Leader>d :bd<CR>
+
+" Show a list of all open buffers
+nmap <Leader>b :ls<CR>
+
+" Tabs
+" ------------------------------------------------------------------------- 
+nmap <C-Tab> :tabn<CR>
 
 " Shortcuts
 " ------------------------------------------------------------------------- 
 
 " Exit insert mode without a manual <ESC> or <C-C>
 imap <Leader><Leader> <ESC>l
-
-" Quit the current window
-nmap <Leader>q :close<CR>
-
-" Delete the current buffer
-nmap <Leader>d :bd<CR>
-
-" Quickly switch buffers (prev/next)
-nmap <C-P> :bp<CR>
-nmap <C-N> :bp<CR>
-
-" Show a list of all open buffers
-nmap <Leader>b :ls<CR>
-
-" Jump from window to window
-nmap <Leader><Tab> <C-W>w
-
-" Jump from tab to tab
-nmap <Leader><S-Tab> :tabn<CR>
 
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
@@ -68,12 +70,6 @@ nmap <Leader>mm <Leader>mw<Leader>mh
 nmap <Leader>Mw :set columns=999<CR>
 nmap <Leader>Mh :set lines=999<CR>
 nmap <Leader>MM <Leader>Mw<Leader>Mh
-
-" Split up/down/left/right
-nmap <Leader>sk :sp \| Explore<CR>
-nmap <Leader>sj :rightbelow sp \| Explore<CR>
-nmap <Leader>sh :vsp \| Explore<CR>
-nmap <Leader>sl :rightbelow vsp \| Explore<CR>
 
 " Jump to Current working directory
 nmap <Leader>. :e .<CR>
@@ -94,12 +90,6 @@ nmap <Leader>n :set nu!<CR>
 nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
 
-" Copy/pasting (via mswin.vim)
-" vnoremap <C-X> "+x
-" vnoremap <C-C> "+y
-" map <C-V> "+gP
-" cmap <C-V> <C-R>+
-
 " Indentation
 " ------------------------------------------------------------------------- 
 
@@ -117,6 +107,7 @@ set nowrap
 set nu
 set showmode
 set ruler
+set cursorline
 
 " Searching
 set hlsearch
