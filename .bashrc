@@ -17,7 +17,13 @@ PS1="\[\033[1;"$PC"m\]\W\[\033[0m\] "
 set -o vi
 
 # Aliases
-alias ls='ls -G'
+if [ `uname` == Linux ]; then
+    LSCOLOR='--color=auto'
+elif [ `uname` == Darwin ]; then
+    LSCOLOR='-G'
+fi
+
+alias ls="ls $LSCOLOR"
 alias ll='ls -la'
 alias vi='vim'
 alias v='vim .'
