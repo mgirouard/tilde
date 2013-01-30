@@ -47,17 +47,8 @@ set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%%
 
 " Buffers
 " ------------------------------------------------------------------------- 
-
-" dwm.vim is installed so a <C-L> and <C-H> compliment the window 
-" navigation well
-nmap <C-L> :bn<CR>
-nmap <C-H> :bp<CR>
-
-" Delete the current buffer
-nmap <Leader>d :bd<CR>
-
-" Show a list of all open buffers
-nmap <Leader>b :ls<CR>
+nmap <Leader>d :bd<CR>              " 녕히가세요
+nmap <Leader>b :ls<CR>              " 여보세요
 
 " Tabs
 " ------------------------------------------------------------------------- 
