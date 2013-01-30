@@ -5,8 +5,17 @@
 " Initialization
 " ------------------------------------------------------------------------- 
 set nocompatible
-set t_Co=256
 let mapleader = ","
+
+" Colors
+" ------------------------------------------------------------------------- 
+set t_Co=256
+
+try
+    colorscheme vividchalk
+catch
+    colorscheme slate
+endtry
 
 " Pathogen (as a bundle)
 " ------------------------------------------------------------------------- 
@@ -148,14 +157,6 @@ if expand('%:t') =~?'bash-fc-\d\+'
   setfiletype sh
 endif
 
-" Colors
-" ------------------------------------------------------------------------- 
-
-try
-    colorscheme vividchalk
-catch
-    colorscheme slate
-endtry
 
 " GUI only stuff
 " ------------------------------------------------------------------------- 
