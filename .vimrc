@@ -16,7 +16,7 @@ set t_Co=256
 try
     colorscheme vividchalk
 catch
-    colorscheme slate
+    colorscheme desert
 endtry
 
 " Pathogen (as a bundle)
