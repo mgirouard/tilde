@@ -6,6 +6,8 @@
 " ------------------------------------------------------------------------- 
 set nocompatible
 let mapleader = ","
+filetype plugin on
+syntax on
 
 " Colors
 " ------------------------------------------------------------------------- 
@@ -135,6 +137,8 @@ let php_folding = 1
 
 " Specific filetypes
 " ------------------------------------------------------------------------- 
+
+autocmd BufNewFile,BufRead,BufEnter *.sass set filetype=sass
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
