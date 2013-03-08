@@ -59,6 +59,10 @@ nmap <C-Tab> :tabn<CR>
 " Shortcuts
 " ------------------------------------------------------------------------- 
 
+" Jump around within the current window
+" nmap <C-Space> <C-D><S-M>
+nmap <M-Space> <C-U><S-M>
+
 " Exit insert mode without a manual <ESC> or <C-C>
 imap <Leader><Leader> <ESC>l
 
