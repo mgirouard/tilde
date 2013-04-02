@@ -85,7 +85,7 @@ nmap - :Explore<CR>
 
 " Toggle hidden chars
 set listchars=tab:·\ 
-set listchars+=extends:↵
+set listchars+=extends:…
 nmap <Leader>l :set list!<CR>
 
 " Toggle line wrapping
