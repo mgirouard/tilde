@@ -4,8 +4,7 @@
 ##
 
 # Bash completion for Git (Homebrew Style)
-# FIXME: Need a non-version specific way of handling this
-GC=/usr/local/Cellar/git/current/etc/bash_completion.d/git-completion.bash
+GC=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -r $GC ]; then . $GC; fi
 
 # A minimal prompt
