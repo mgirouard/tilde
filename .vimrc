@@ -12,12 +12,7 @@ syntax on
 " Colors
 " ------------------------------------------------------------------------- 
 set t_Co=256
-
-try
-    colorscheme vividchalk
-catch
-    colorscheme desert
-endtry
+colorscheme default
 
 " Pathogen (as a bundle)
 " ------------------------------------------------------------------------- 
