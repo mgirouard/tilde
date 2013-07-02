@@ -31,6 +31,11 @@ nmap <Leader>gp :Git add -p<CR>
 nmap <Leader>gc :Git commit -v<CR>
 nmap <Leader>go :Git checkout 
 
+" Unite
+" ------------------------------------------------------------------------- 
+nmap <Leader>f :Unite file<CR>
+imap <C-f> <Esc>:Unite file<CR>
+
 " Status Line
 " ------------------------------------------------------------------------- 
 " Inspired by spf13: https://github.com/spf13/spf13-vim/blob/master/.vimrc
