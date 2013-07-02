@@ -3,7 +3,7 @@
 # http://www.github.com/mgirouard/Dots
 ##
 
-# Bash completion for Git (Homebrew Style)
+# Bash completion for Git
 GC=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -r $GC ]; then . $GC; fi
 
@@ -23,6 +23,8 @@ alias ls="ls $LSCOLOR"
 alias ll='ls -la'
 alias vi='vim'
 alias v='vim .'
+alias php='php-cli'
+alias grep='grep --color'
 
 # Source env-specific stuff
 if [ -d ~/.bashrc.d ]; then
