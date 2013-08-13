@@ -21,12 +21,16 @@ elif [ `uname` == Darwin ]; then
     LSCOLOR='-G'
 fi
 
+# Alias mvim for a replacement for the default vim (Mac OS only)
+[[ -x `which mvim` ]] && alias vim='mvim -v'
+
 alias ls="ls $LSCOLOR"
 alias ll='ls -la'
 alias vi='vim'
 alias v='vim .'
 alias php='php-cli'
 alias grep='grep --color'
+alias tmux='tmux -2'
 
 # Source env-specific stuff
 if [ -d ~/.bashrc.d ]; then
