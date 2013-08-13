@@ -38,14 +38,14 @@ imap <C-f> <Esc>:Unite file<CR>
 
 " Status Line
 " ------------------------------------------------------------------------- 
-" Inspired by spf13: https://github.com/spf13/spf13-vim/blob/master/.vimrc
+" Using vim-airline: https://github.com/bling/vim-airline
+" let g:airline_powerline_fonts=1
 set laststatus=2
-set statusline=%n:
-set statusline+=%<%t\ 
-set statusline+=%w%h%m%r 
-set statusline+=%{fugitive#statusline()} 
-set statusline+=\ [%{&ff}/%Y] 
-set statusline+=%=%-14.(%o,%l,%c%V%)\ %p%% 
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_fugitive_prefix = '⎇  '
+let g:airline_paste_symbol = 'Þ'
 
 " Buffers
 " ------------------------------------------------------------------------- 
