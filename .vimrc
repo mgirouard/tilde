@@ -1,27 +1,27 @@
 " Mike G's Super Amazing .vimrc
-" ========================================================================= 
+" =========================================================================
 " More fun to be had at http://www.github.com/mgirouard/Dots
 
 " Initialization
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 set nocompatible
 let mapleader = ","
 filetype plugin on
 syntax on
 
 " Colors
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 set t_Co=256
 colorscheme desert
 
 " Pathogen (as a bundle)
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
 Helptags
 
 " Git
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 " via Fugitive: https://github.com/tpope/vim-fugitive/
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
@@ -41,23 +41,25 @@ imap <C-f> <Esc>:Unite file<CR>
 " Using vim-airline: https://github.com/bling/vim-airline
 " let g:airline_powerline_fonts=1
 set laststatus=2
+let g:airline_enable_branch = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_linecolumn_prefix = '¶ '
-let g:airline_fugitive_prefix = '⎇  '
+let g:airline_branch_prefix = '⎇  '
 let g:airline_paste_symbol = 'Þ'
+let g:airline_detect_whitespace=1
 
 " Buffers
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 nmap <Leader>d :bd<CR>
 nmap <Leader>b :ls<CR>
 
 " Tabs
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 nmap <C-Tab> :tabn<CR>
 
 " Shortcuts
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 " Jump around within the current window
 " nmap <C-Space> <C-D><S-M>
@@ -99,7 +101,7 @@ nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
 
 " Indentation
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 set shiftwidth=4
 set softtabstop=4
@@ -109,7 +111,7 @@ set autoindent
 set cindent
 
 " Editor Behavior
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 set nowrap
 set nu
@@ -125,14 +127,14 @@ nmap <Leader>/ :silent!/thisisacheapwayofclearingthesearch<CR>
 
 " Insure Clean Pasting w/autoindented code
 nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2> 
+set pastetoggle=<F2>
 
 " Backup files are for the weak
 set nobackup
 set nowritebackup
 
 " Syntax
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 syntax on
 filetype plugin indent on
@@ -142,7 +144,7 @@ set foldlevel=1
 let php_folding = 1
 
 " Specific filetypes
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 autocmd BufNewFile,BufRead,BufEnter *.sass set filetype=sass
 
@@ -160,7 +162,7 @@ endif
 
 
 " GUI only stuff
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 if has('gui_running')
     set guioptions=gt
@@ -177,12 +179,12 @@ elseif has('win32')
 endif
 
 " Workarounds and bug fixes
-" ------------------------------------------------------------------------- 
+" -------------------------------------------------------------------------
 
 " Set a window's attributes back to normal after NetRw borks them
 "
-" I shouldn't have to do this, but for some reason navigating up 
-" directories in Netrw will cause a window to have `nomodifiable` and 
+" I shouldn't have to do this, but for some reason navigating up
+" directories in Netrw will cause a window to have `nomodifiable` and
 " `readonly` set. It also drops line numbers.
 "
 " I'm guessing it's inheriting those properties from the Netrw window.
