@@ -8,6 +8,7 @@ set nocompatible
 let mapleader = ","
 filetype plugin on
 syntax on
+set encoding=utf-8
 
 " Colors
 " -------------------------------------------------------------------------
