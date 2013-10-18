@@ -35,6 +35,7 @@ nmap <Leader>go :Git checkout
 " Unite
 " ------------------------------------------------------------------------- 
 nmap <Leader>f :Unite file<CR>
+nmap <Leader>r :Unite file_rec<CR>
 imap <C-f> <Esc>:Unite file<CR>
 
 " Status Line
@@ -156,6 +157,7 @@ autocmd BufNewFile,BufRead *.txt,*.markdown,*.mdown,*.mkd,*.mkdn,README* setf ma
 
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
+autocmd FileType yaml setlocal indentexpr= syntax=
 
 if expand('%:t') =~?'bash-fc-\d\+'
   setfiletype sh
