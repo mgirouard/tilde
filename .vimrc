@@ -21,6 +21,20 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
 Helptags
 
+" Windows, Split, Tabs
+" --------------------
+
+" Use Tab key to jump between splits
+nmap <Tab> <C-w><C-w>
+nmap <S-Tab> <C-w>W
+
+" Map control + hjkl keys to open splits in the respective directions
+nmap <C-j> :rightbelow sp \| E<cr>
+nmap <C-k> :sp \| E<cr>
+nmap <C-l> :rightbelow vsp \| E<cr>
+nmap <C-h> :vsp \| E<cr>
+nmap <C-c> :close<cr>
+
 " Git
 " -------------------------------------------------------------------------
 " via Fugitive: https://github.com/tpope/vim-fugitive/
