@@ -69,6 +69,7 @@ let g:airline_detect_whitespace=1
 " -------------------------------------------------------------------------
 nmap <Leader>d :bd<CR>
 nmap <Leader>b :ls<CR>
+nmap _ <Leader>be
 
 " Tabs
 " -------------------------------------------------------------------------
@@ -115,6 +116,9 @@ nmap <Leader>n :set nu!<CR>
 " .vimrc Helpers
 nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
+
+" Snipmate
+nmap <Leader>es :tabnew ~/.vim/bundle/vim-snippets<CR>
 
 " Indentation
 " -------------------------------------------------------------------------
@@ -165,13 +169,13 @@ let php_folding = 1
 autocmd BufNewFile,BufRead,BufEnter *.sass set filetype=sass
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=0
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.mdown,*.mkd,*.mkdn,README* setf markdown | set linebreak wrap
 
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
-autocmd FileType yaml setlocal indentexpr= syntax=
 
 if expand('%:t') =~?'bash-fc-\d\+'
   setfiletype sh
