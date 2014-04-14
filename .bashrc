@@ -28,7 +28,6 @@ alias ls="ls $LSCOLOR"
 alias ll='ls -la'
 alias vi='vim'
 alias v='vim .'
-alias php='php-cli'
 alias grep='grep --color'
 alias tmux='tmux -2'
 
