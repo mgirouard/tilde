@@ -4,8 +4,8 @@
 ##
 
 # Bash completion for Git
-GC=/usr/local/etc/bash_completion.d/git-completion.bash
-if [ -r $GC ]; then . $GC; fi
+# GC=/usr/local/etc/bash_completion.d/git-completion.bash
+if [ -d /usr/local/etc/bash_completion.d ]; then source /usr/local/etc/bash_completion.d/*; fi
 
 function parse_git_branch { 
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
