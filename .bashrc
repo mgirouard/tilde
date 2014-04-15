@@ -8,13 +8,12 @@
 if [ -d /usr/local/etc/bash_completion.d ]; then source /usr/local/etc/bash_completion.d/*; fi
 
 function parse_git_branch { 
-    b=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-    [[ $b ]] && echo -e ⎇ " \033[0;33m"$b"\033[0m"
+    local b=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+    [[ $b ]] && echo -e "\033[0m"" ⎇  \033[1;32m"$b"\033[0m"
 } 
 
 if [ $EUID -eq 0 ]; then PC=31; else PC=36; fi
-PS1="\[\033[1;"$PC"m\]\w\[\033[0m\] \$(parse_git_branch) 
-λ "
+export PS1="→ \[\e[0;33m\]\w\$(parse_git_branch)\[\e[0m\] λ "
 
 # Aliases
 if [ `uname` == Linux ]; then
