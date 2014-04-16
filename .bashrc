@@ -13,7 +13,7 @@ function parse_git_branch {
 } 
 
 if [ $EUID -eq 0 ]; then PC=31; else PC=36; fi
-export PS1="→ \[\e[0;33m\]\w\$(parse_git_branch)\[\e[0m\] λ "
+PS1="\[\e[0;33m\]\w\$(parse_git_branch)\[\e[0m\]\nλ ($?) "
 
 # Aliases
 if [ `uname` == Linux ]; then
