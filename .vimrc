@@ -120,6 +120,12 @@ nmap <Leader>sr :source ~/.vimrc<CR>
 " Snipmate
 nmap <Leader>es :tabnew ~/.vim/bundle/vim-snippets<CR>
 
+" Trim off brackets:
+" x = immediately under cursor
+" X = nearest the cursor
+nmap <Leader>x %x``x
+nmap <Leader>X %%x``x
+
 " Indentation
 " -------------------------------------------------------------------------
 
