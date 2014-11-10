@@ -77,6 +77,8 @@ nmap <C-Tab> :tabn<CR>
 
 " Shortcuts
 " -------------------------------------------------------------------------
+nmap <Leader>1 :set foldlevel=1<cr>
+nmap <Leader>2 :set foldlevel=2<cr>
 
 " Jump around within the current window
 " nmap <C-Space> <C-D><S-M>
