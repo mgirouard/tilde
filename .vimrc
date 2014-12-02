@@ -43,7 +43,7 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gp :Git add -p<CR>
-nmap <Leader>gc :Git commit -v<CR>
+nmap <Leader>gc :Gcommit -v<CR>
 nmap <Leader>go :Git checkout 
 
 " Unite
@@ -181,6 +181,7 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=1
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,*.mdown,*.mkd,*.mkdn,README* set filetype=markdown
+autocmd Filetype gitcommit set spell
 
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
