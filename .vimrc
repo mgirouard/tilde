@@ -53,9 +53,10 @@ nmap <Leader>go :Git checkout
 
 " Unite
 " ------------------------------------------------------------------------- 
-nmap <Leader>f :Unite file<CR>
-nmap <Leader>r :Unite file_rec<CR>
+nmap <Leader>f :Unite -start-insert file<CR>
+nmap <Leader>r :Unite -start-insert file_rec<CR>
 imap <C-f> <Esc>:Unite file<CR>
+nmap _ :Unite buffer<CR>
 
 " Status Line
 " ------------------------------------------------------------------------- 
@@ -70,14 +71,9 @@ let g:airline_branch_prefix = '⎇  '
 let g:airline_paste_symbol = 'Þ'
 let g:airline_detect_whitespace=1
 
-" Buffers
+" Buffers, Tabs
 " -------------------------------------------------------------------------
 nmap <Leader>d :bd<CR>
-nmap <Leader>b :ls<CR>
-nmap _ <Leader>be
-
-" Tabs
-" -------------------------------------------------------------------------
 nmap <C-Tab> :tabn<CR>
 
 " Shortcuts
