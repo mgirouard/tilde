@@ -27,6 +27,8 @@ elif [ `uname` == Darwin ]; then
     LSCOLOR='-G'
 fi
 
+export TERM=screen-256color
+
 # Alias mvim for a replacement for the default vim (Mac OS only)
 [[ -x `which mvim` ]] && alias vim='mvim -v'
 
