@@ -38,6 +38,7 @@ alias vi='vim'
 alias v='vim .'
 alias grep='grep --color'
 alias tmux='tmux -2'
+alias pubkey='cat ~/.ssh/id_rsa.pub'
 
 grepf() { tail -f $1 | grep --line-buffered $2; }
 

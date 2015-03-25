@@ -178,6 +178,7 @@ let php_folding = 1
 autocmd BufNewFile,BufRead,BufEnter *.sass set filetype=sass
 
 autocmd BufNewFile,BufRead *.spark set filetype=xml
+autocmd BufNewFile,BufRead parameters.yml.dist set filetype=yaml
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=1
