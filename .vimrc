@@ -65,7 +65,7 @@ nmap _ :Unite buffer<CR>
 set laststatus=2
 let g:airline_enable_branch = 1
 let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_right_sep = '◀'
 let g:airline_linecolumn_prefix = '¶ '
 let g:airline_branch_prefix = '⎇  '
 let g:airline_paste_symbol = 'Þ'
