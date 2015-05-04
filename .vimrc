@@ -61,15 +61,16 @@ nmap _ :Unite buffer<CR>
 " Status Line
 " ------------------------------------------------------------------------- 
 " Using vim-airline: https://github.com/bling/vim-airline
-" let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=1
 set laststatus=2
-let g:airline_enable_branch = 1
+let g:airline_symbols = {}
+let g:airline#extensions#branch#enabled = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = '◀'
-let g:airline_linecolumn_prefix = '¶ '
-let g:airline_branch_prefix = '⎇  '
-let g:airline_paste_symbol = 'Þ'
-let g:airline_detect_whitespace=1
+let g:airline_symbols.linenr = '¶ '
+let g:airline_symbols.branch = '⎇  '
+let g:airline_symbols.paste = 'Þ'
+let g:airline#extensions#whitespace#enabled = 1
 
 " Buffers, Tabs
 " -------------------------------------------------------------------------
