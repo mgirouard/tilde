@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vim-hackernews"]
 	path = .vim/bundle/vim-hackernews
 	url = https://github.com/ryanss/vim-hackernews
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
