@@ -17,8 +17,13 @@ function nl_if_repo {
     $(git in-repo 2> /dev/null) && echo \n
 }
 
+function generate_PS1() {
+    exitval=$?
+    PS1="\[\e[0;33m\]\w\$(parse_git_branch)\[\e[0m\] \nλ ($exitval) "
+}
+
 if [ $EUID -eq 0 ]; then PC=31; else PC=36; fi
-PS1="\[\e[0;33m\]\w\$(parse_git_branch)\[\e[0m\] \nλ ($?) "
+export PROMPT_COMMAND=generate_PS1
 
 # Aliases
 if [ `uname` == Linux ]; then
