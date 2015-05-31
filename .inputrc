@@ -4,6 +4,12 @@ set completion-ignore-case on
 # Behave like VI
 set editing-mode vi
 
+# When in VI mode, using <C-l> to clear the screen will only work in normal
+# mode. This enables it in insert mode as well
+$if Bash
+    "\C-l": "\e\C-la"
+$endif
+
 # Use current input as a base when searching history
 "\e[B": history-search-forward
 "\e[A": history-search-backward
