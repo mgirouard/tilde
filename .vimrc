@@ -30,6 +30,12 @@ silent! call pathogen#infect()
 Helptags
 colorscheme molokai
 
+" Netrw Configuration 
+" (who needs NERDTree?)
+" -------------------------------------------------------------------------
+"  Turn off top banner
+let g:netrw_banner = 0
+
 " Windows, Split, Tabs
 " --------------------
 
