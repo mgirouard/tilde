@@ -28,6 +28,7 @@ elif [ `uname` == Darwin ]; then
 fi
 
 export TERM=screen-256color
+export ANSIBLE_HOSTS=./production
 
 # Alias mvim for a replacement for the default vim (Mac OS only)
 [[ -x `which mvim` ]] && alias vim='mvim -v'
