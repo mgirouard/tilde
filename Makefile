@@ -16,12 +16,12 @@ install: $(SYMLINKS)
 
 # Install symlinks
 $(SYMLINKS): clean
-	@echo "ln -s $(PROJECT)/$(@F) $@"
+	ln -s $(PROJECT)/$(@F) $@
 
 # Cleanup/uninstall
 clean:
 	@for l in $(SYMLINKS); do \
 		if [[ -e $$l ]]; then \
-			echo "rm $$l";    \
+			rm $$l;    		  \
 		fi;                   \
 	done
