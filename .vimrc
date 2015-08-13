@@ -93,8 +93,9 @@ nmap <Leader>2 :set foldlevel=2<cr>
 " nmap <C-Space> <C-D><S-M>
 nmap <M-Space> <C-U><S-M>
 
+" FIXME: I am going to quit this bad habit
 " Exit insert mode without a manual <ESC> or <C-C>
-imap <Leader><Leader> <ESC>l
+" imap <Leader><Leader> <ESC>l
 
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
