@@ -36,6 +36,14 @@ let g:netrw_banner = 0
 " Windows, Split, Tabs
 " --------------------
 
+" Make it convenient to swap tabs
+nmap <Leader>t :tabn<cr>
+nmap <Leader>T :tabp<cr>
+
+" ... ditto for buffers
+nmap <Leader>b :bprevious<cr>
+nmap <Leader>B :bnext<cr>
+
 " Use Tab key to jump between splits
 nmap <Tab> <C-w><C-w>
 nmap <S-Tab> <C-w>W
