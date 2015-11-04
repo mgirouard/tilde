@@ -12,7 +12,11 @@ SYMLINKS = $(PREFIX)/.bash_profile \
 .DEFAULT: install
 .PHONY: install clean
 
-install: $(SYMLINKS)
+install: dirs $(SYMLINKS)
+
+dirs:
+	mkdir -p $$HOME/bin
+	mkdir -p $$HOME/.bashrc.d
 
 # Install symlinks
 $(SYMLINKS): clean
