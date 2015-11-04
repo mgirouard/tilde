@@ -5,7 +5,9 @@
 
 # Bash completion for Git
 # GC=/usr/local/etc/bash_completion.d/git-completion.bash
-if [ -d /usr/local/etc/bash_completion.d ]; then source /usr/local/etc/bash_completion.d/*; fi
+if [ -d /usr/local/etc/bash_completion.d ]; then
+    source /usr/local/etc/bash_completion.d/*
+fi
 
 function parse_git_branch { 
     local b=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -20,7 +22,6 @@ function generate_PS1() {
 
 export PROMPT_COMMAND=generate_PS1
 
-# Aliases
 if [ `uname` == Linux ]; then
     LSCOLOR='--color=auto'
 elif [ `uname` == Darwin ]; then
@@ -30,9 +31,7 @@ fi
 export TERM=screen-256color
 export ANSIBLE_HOSTS=./production
 
-# Alias mvim for a replacement for the default vim (Mac OS only)
-[[ -x `which mvim` ]] && alias vim='mvim -v'
-
+# Aliases
 alias ls="ls $LSCOLOR"
 alias ll='ls -la'
 alias vi='vim'
