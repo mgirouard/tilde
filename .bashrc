@@ -39,6 +39,7 @@ HISTFILESIZE=10000
 
 export TERM=screen-256color
 export ANSIBLE_HOSTS=./production
+export GOPATH=$HOME
 
 # Aliases
 # -----------------------------------------------------------------------------
