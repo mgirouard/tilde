@@ -1,8 +1,3 @@
-## 
-# Dots
-# http://www.github.com/mgirouard/Dots
-##
-
 # Bash completion
 # -----------------------------------------------------------------------------
 if [ -d /usr/local/etc/bash_completion.d ]; then
