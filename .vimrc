@@ -1,7 +1,3 @@
-" Mike G's Super Amazing .vimrc
-" =========================================================================
-" More fun to be had at http://www.github.com/mgirouard/Dots
-"
 set showmatch
 set matchtime=1
 set colorcolumn=80
