@@ -55,6 +55,10 @@ nmap <C-l> :rightbelow vsp \| E<cr>
 nmap <C-h> :vsp \| E<cr>
 nmap <C-c> :close<cr>
 
+" Like the above bug with a `gf` flavor:
+nmap <C-w><C-l> :rightb vertical wincmd f<CR>
+nmap <C-w><C-h> :vertical wincmd f<CR>
+
 " Git
 " -------------------------------------------------------------------------
 " via Fugitive: https://github.com/tpope/vim-fugitive/
@@ -96,6 +100,9 @@ nmap <C-Tab> :tabn<CR>
 " -------------------------------------------------------------------------
 nmap <Leader>1 :set foldlevel=1<cr>
 nmap <Leader>2 :set foldlevel=2<cr>
+
+nmap <F3> :Tagbar<cr>
+imap <F3> :Tagbar<cr>
 
 " Jump around within the current window
 " nmap <C-Space> <C-D><S-M>
