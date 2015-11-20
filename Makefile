@@ -2,6 +2,7 @@ PREFIX ?= ~
 PROJECT = $(shell pwd)
 SYMLINKS = $(PREFIX)/.bash_profile \
 		   $(PREFIX)/.bashrc       \
+		   $(PREFIX)/.gitignore    \
 		   $(PREFIX)/.inputrc      \
 		   $(PREFIX)/.profile      \
 		   $(PREFIX)/.tmux.conf    \
