@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule ".vim/bundle/vim-phpfmt"]
+	path = .vim/bundle/vim-phpfmt
+	url = https://github.com/phpfmt/vim-phpfmt.git
