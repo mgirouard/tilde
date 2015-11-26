@@ -29,6 +29,14 @@ colorscheme solarized
 "  Turn off top banner
 let g:netrw_banner = 0
 
+" phpfmt Configuration
+" -------------------------------------------------------------------------
+let g:phpfmt_update_on_open = 0
+let g:phpfmt_enable_default_mapping = 0
+let g:phpfmt_on_save = 0
+let g:phpfmt_config = expand('~') . '/.php.tools.ini'
+nmap <F4> :call PhpFmtFixFile()<CR>
+
 " Windows, Split, Tabs
 " --------------------
 

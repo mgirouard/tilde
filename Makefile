@@ -1,13 +1,14 @@
 PREFIX ?= ~
 PROJECT = $(shell pwd)
-SYMLINKS = $(PREFIX)/.bash_profile \
-		   $(PREFIX)/.bashrc       \
-		   $(PREFIX)/.gitignore    \
-		   $(PREFIX)/.inputrc      \
-		   $(PREFIX)/.profile      \
-		   $(PREFIX)/.tmux.conf    \
-		   $(PREFIX)/.vim          \
-		   $(PREFIX)/.vimrc        \
+SYMLINKS = $(PREFIX)/.bash_profile  \
+		   $(PREFIX)/.bashrc        \
+		   $(PREFIX)/.gitignore     \
+		   $(PREFIX)/.inputrc       \
+		   $(PREFIX)/.php.tools.ini \
+		   $(PREFIX)/.profile       \
+		   $(PREFIX)/.tmux.conf     \
+		   $(PREFIX)/.vim           \
+		   $(PREFIX)/.vimrc         \
 		   $(PREFIX)/.xinitrc
 
 .DEFAULT: install
