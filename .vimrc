@@ -254,3 +254,5 @@ nmap <Leader>! :set nu modifiable noreadonly<CR>
 "
 " This is useful when folds toggle open when adjusting strings or brackets
 nmap <Leader>O zrzmzo
+
+set tags=./project.tags;project.tags
