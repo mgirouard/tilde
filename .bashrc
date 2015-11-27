@@ -8,8 +8,14 @@ fi
 # -----------------------------------------------------------------------------
 function parse_git_branch { 
     local b=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-    [[ $b ]] && echo -n -e "\033[0m"" ⎇  \033[1;32m"$b"\033[0m "
-    [[ `which git-branch-status` ]] && git branch-status
+
+    if [ $b ]; then 
+        echo -n -e "\033[0m"" ⎇  \033[1;32m"$b"\033[0m ";
+    fi
+
+    if [ `which git-branch-status` ]; then
+        git branch-status;
+    fi
 }
 
 function generate_PS1() {
@@ -48,7 +54,9 @@ alias pubkey='cat ~/.ssh/id_rsa.pub'
 
 # Utilities
 # -----------------------------------------------------------------------------
-grepf() { tail -f $1 | grep --line-buffered $2; }
+grepf() {
+    tail -f $1 | grep --line-buffered $2;
+}
 
 # Source env-specific stuff
 # -----------------------------------------------------------------------------

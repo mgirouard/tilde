@@ -27,7 +27,7 @@ $(SYMLINKS): clean
 # Cleanup/uninstall
 clean:
 	@for l in $(SYMLINKS); do \
-		if [[ -e $$l ]]; then \
-			rm $$l;    		  \
+		if [ -e $$l ]; then   \
+			rm $$l;           \
 		fi;                   \
 	done
