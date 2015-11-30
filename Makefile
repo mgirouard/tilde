@@ -1,5 +1,12 @@
 PREFIX ?= ~
+PLATFORM = $(shell uname -s | tr A-Z a-z)
 PROJECT = $(shell pwd)
+BINDIR = $(PREFIX)/bin
+
+DIRS = $(BINDIR)     \
+	   $(PREFIX)/src \
+	   $(PREFIX)/.bashrc.d
+
 SYMLINKS = $(PREFIX)/.bash_profile  \
 		   $(PREFIX)/.bashrc        \
 		   $(PREFIX)/.gitignore     \
@@ -14,14 +21,14 @@ SYMLINKS = $(PREFIX)/.bash_profile  \
 .DEFAULT: install
 .PHONY: install clean
 
-install: dirs $(SYMLINKS)
+install: $(DIRS) $(SYMLINKS)
 
-dirs:
-	mkdir -p $$HOME/bin
-	mkdir -p $$HOME/.bashrc.d
+# Ensure connon directories exist
+$(DIRS):
+	mkdir -p $@
 
 # Install symlinks
-$(SYMLINKS): clean
+$(SYMLINKS):
 	ln -s $(PROJECT)/$(@F) $@
 
 # Cleanup/uninstall
