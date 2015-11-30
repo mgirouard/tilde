@@ -23,7 +23,7 @@ SYMLINKS = $(PREFIX)/.bash_profile  \
 
 install: $(DIRS) $(SYMLINKS) $(PLATFORM)
 
-# Ensure connon directories exist
+# Ensure common directories exist
 $(DIRS):
 	mkdir -p $@
 
