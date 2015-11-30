@@ -21,7 +21,7 @@ SYMLINKS = $(PREFIX)/.bash_profile  \
 .DEFAULT: install
 .PHONY: install clean
 
-install: $(DIRS) $(SYMLINKS)
+install: $(DIRS) $(SYMLINKS) $(PLATFORM)
 
 # Ensure connon directories exist
 $(DIRS):
@@ -38,3 +38,5 @@ clean:
 			rm $$l;           \
 		fi;                   \
 	done
+
+include $(PLATFORM).mk
