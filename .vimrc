@@ -256,3 +256,9 @@ nmap <Leader>! :set nu modifiable noreadonly<CR>
 nmap <Leader>O zrzmzo
 
 set tags=./project.tags;project.tags
+
+" Local Settings
+" -------------------------------------------------------------------------
+if filereadable (expand("~/.vimrc.local"))
+    :source ~/.vimrc.local
+endif
