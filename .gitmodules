@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/vim-phpfmt"]
 	path = .vim/bundle/vim-phpfmt
 	url = https://github.com/phpfmt/vim-phpfmt.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
