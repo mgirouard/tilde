@@ -29,6 +29,17 @@ colorscheme solarized
 "  Turn off top banner
 let g:netrw_banner = 0
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_php_phpcs_args = "--standard=PSR2"
+
 " phpfmt Configuration
 " -------------------------------------------------------------------------
 let g:phpfmt_update_on_open = 0
