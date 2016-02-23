@@ -11,8 +11,5 @@ export TERM=xterm-color
 
 # Editor
 export EDITOR='vim'
-#export GIT_EDITOR='vim -f'
-#export SVN_EDITOR='vim -f'
 
-# User Scripts
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:vendor/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:vendor/bin:$HOME/.composer/vendor/bin:$PATH
