@@ -29,6 +29,9 @@ colorscheme solarized
 "  Turn off top banner
 let g:netrw_banner = 0
 
+
+" Syntastic Configuration
+" -------------------------------------------------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
