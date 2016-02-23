@@ -118,6 +118,8 @@ nmap <Leader>2 :set foldlevel=2<cr>
 
 nmap <F3> :Tagbar<cr>
 imap <F3> :Tagbar<cr>
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 
 " Jump around within the current window
 " nmap <C-Space> <C-D><S-M>
