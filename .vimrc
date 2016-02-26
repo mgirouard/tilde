@@ -43,6 +43,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_php_phpcs_args = "--standard=PSR2"
 
+nmap <F5> :SyntasticToggleMode<CR>
+
 " phpfmt Configuration
 " -------------------------------------------------------------------------
 let g:phpfmt_update_on_open = 0
