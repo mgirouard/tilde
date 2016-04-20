@@ -87,8 +87,11 @@ nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>ga :Git add %<CR>
 nmap <Leader>gp :Git add -p<CR>
+nmap <Leader>gp :Git checkout -p<CR>
 nmap <Leader>gc :Gcommit -v<CR>
-nmap <Leader>go :Git checkout 
+nmap <Leader>go :Git checkout
+nmap <Leader>gn :GitGutterNextHunk<CR>
+nmap <Leader>gN :GitGutterPrevHunk<CR>
 
 " Unite
 " ------------------------------------------------------------------------- 
