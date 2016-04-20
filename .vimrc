@@ -234,6 +234,7 @@ autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead *.html,*.phtml set filetype=php ai
 autocmd BufNewFile,BufRead *.js set foldlevel=1
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,*.mdown,*.mkd,*.mkdn,README* set filetype=markdown
+autocmd BufNewFile,BufRead *.yml,*.yaml set foldmethod=indent
 autocmd Filetype gitcommit set spell
 
 autocmd FileType java setlocal noexpandtab softtabstop=0
