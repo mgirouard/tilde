@@ -95,8 +95,10 @@ nmap <Leader>gN :GitGutterPrevHunk<CR>
 
 " Unite
 " ------------------------------------------------------------------------- 
-nmap <Leader>f :Unite -start-insert file<CR>
-nmap <Leader>r :Unite -start-insert file_rec<CR>
+let g:unite_redraw_hold_candidates = 50000
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <nnoremapleader>r :<C-u>Unite -start-insert file_rec<CR>
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec/git<CR>
 imap <C-f> <Esc>:Unite file<CR>
 nmap _ :Unite buffer<CR>
 
