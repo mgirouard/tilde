@@ -69,10 +69,10 @@ nmap <Tab> <C-w><C-w>
 nmap <S-Tab> <C-w>W
 
 " Map control + hjkl keys to open splits in the respective directions
-nmap <C-j> :rightbelow sp \| E<cr>
-nmap <C-k> :sp \| E<cr>
-nmap <C-l> :rightbelow vsp \| E<cr>
-nmap <C-h> :vsp \| E<cr>
+nmap <C-j> :rightbelow sp \| Explore<cr>
+nmap <C-k> :sp \| Explore<cr>
+nmap <C-l> :rightbelow vsp \| Explore<cr>
+nmap <C-h> :vsp \| Explore<cr>
 nmap <C-c> :close<cr>
 
 " Like the above bug with a `gf` flavor:
