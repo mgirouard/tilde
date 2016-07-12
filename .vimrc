@@ -1,7 +1,3 @@
-set showmatch
-set matchtime=1
-set colorcolumn=80
-
 " Initialization
 " -------------------------------------------------------------------------
 set nocompatible
@@ -10,134 +6,49 @@ filetype plugin on
 syntax on
 set encoding=utf-8
 
-" Pathogen (as a bundle)
+" Pathogen
 " -------------------------------------------------------------------------
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
 Helptags
 
-" Colors
+" Maps
 " -------------------------------------------------------------------------
-syntax enable
-set t_Co=256
-set background=dark
-colorscheme solarized
+nnoremap <F2> :set invpaste paste?<CR>
+nnoremap <F3> :Tagbar<cr>
+nnoremap <F4> :call PhpFmtFixFile()<CR>
+nnoremap <F5> :SyntasticToggleMode<CR>
 
-" Netrw Configuration 
-" (who needs NERDTree?)
-" -------------------------------------------------------------------------
-"  Turn off top banner
-let g:netrw_banner = 0
+nmap <Leader>/ :silent!/thisisacheapwayofclearingthesearch<CR>
 
-
-" Syntastic Configuration
-" -------------------------------------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_php_phpcs_args = "--standard=PSR2"
-
-nmap <F5> :SyntasticToggleMode<CR>
-
-" phpfmt Configuration
-" -------------------------------------------------------------------------
-let g:phpfmt_update_on_open = 0
-let g:phpfmt_enable_default_mapping = 0
-let g:phpfmt_on_save = 0
-let g:phpfmt_config = expand('~') . '/.php.tools.ini'
-nmap <F4> :call PhpFmtFixFile()<CR>
-
-" Windows, Split, Tabs
-" --------------------
-
-" Make it convenient to swap tabs
+" Tab Switching
 nmap <Leader>t :tabn<cr>
 nmap <Leader>T :tabp<cr>
 
-" ... ditto for buffers
+" Buffer Switching
 nmap <Leader>b :bprevious<cr>
 nmap <Leader>B :bnext<cr>
 
-" Use Tab key to jump between splits
+" Split Switching
 nmap <Tab> <C-w><C-w>
 nmap <S-Tab> <C-w>W
 
-" Map control + hjkl keys to open splits in the respective directions
+" Create splits quickly in all directions
 nmap <C-j> :rightbelow sp \| Explore<cr>
 nmap <C-k> :sp \| Explore<cr>
 nmap <C-l> :rightbelow vsp \| Explore<cr>
 nmap <C-h> :vsp \| Explore<cr>
-nmap <C-c> :close<cr>
 
-" Like the above bug with a `gf` flavor:
+nmap <C-c> :close<cr>
+nmap <Leader>d :bd<CR>
+
+" Open files in splits
 nmap <C-w><C-l> :rightb vertical wincmd f<CR>
 nmap <C-w><C-h> :vertical wincmd f<CR>
 
-" Git
-" -------------------------------------------------------------------------
-" via Fugitive: https://github.com/tpope/vim-fugitive/
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>ga :Git add %<CR>
-nmap <Leader>gp :Git add -p<CR>
-nmap <Leader>gp :Git checkout -p<CR>
-nmap <Leader>gc :Gcommit -v<CR>
-nmap <Leader>go :Git checkout
-nmap <Leader>gn :GitGutterNextHunk<CR>
-nmap <Leader>gN :GitGutterPrevHunk<CR>
-
-" Unite
-" ------------------------------------------------------------------------- 
-let g:unite_redraw_hold_candidates = 50000
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <nnoremapleader>r :<C-u>Unite -start-insert file_rec<CR>
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec/git<CR>
-imap <C-f> <Esc>:Unite file<CR>
-nmap _ :Unite buffer<CR>
-
-" Status Line
-" ------------------------------------------------------------------------- 
-" Using vim-airline: https://github.com/bling/vim-airline
-let g:airline_powerline_fonts=1
-set laststatus=2
-let g:airline_symbols = {}
-let g:airline#extensions#branch#enabled = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '¶ '
-let g:airline_symbols.branch = '⎇  '
-let g:airline_symbols.paste = 'Þ'
-let g:airline#extensions#whitespace#enabled = 1
-
-" Buffers, Tabs
-" -------------------------------------------------------------------------
-nmap <Leader>d :bd<CR>
-nmap <C-Tab> :tabn<CR>
-
-" Shortcuts
-" -------------------------------------------------------------------------
+" Toggle folding
 nmap <Leader>1 :set foldlevel=1<cr>
 nmap <Leader>2 :set foldlevel=2<cr>
-
-nmap <F3> :Tagbar<cr>
-imap <F3> :Tagbar<cr>
-let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0
-
-" Jump around within the current window
-" nmap <C-Space> <C-D><S-M>
-nmap <M-Space> <C-U><S-M>
-
-" FIXME: I am going to quit this bad habit
-" Exit insert mode without a manual <ESC> or <C-C>
-" imap <Leader><Leader> <ESC>l
 
 " Quickly 'maximize' a split
 nmap <Leader>mw <C-W>\|
@@ -167,7 +78,7 @@ nmap <Leader>w :set wrap!<CR>
 " Toggle line numbers
 nmap <Leader>n :set nu!<CR>
 
-" .vimrc Helpers
+" Edit or reload .vimrc
 nmap <Leader>er :tabnew ~/.vimrc<CR>
 nmap <Leader>sr :source ~/.vimrc<CR>
 
@@ -180,54 +91,112 @@ nmap <Leader>es :tabnew ~/.vim/bundle/vim-snippets<CR>
 nmap <Leader>x %x``x
 nmap <Leader>X %%x``x
 
-" Indentation
-" -------------------------------------------------------------------------
-
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-set autoindent
-set cindent
-
 " Editor Behavior
 " -------------------------------------------------------------------------
 
-set nowrap
-set nu
-set showmode
-set ruler
-set cursorline
-
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-nmap <Leader>/ :silent!/thisisacheapwayofclearingthesearch<CR>
-
-" Insure Clean Pasting w/autoindented code
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-
-" Backup files are for the weak
-set nobackup
-set nowritebackup
-
-" Syntax
-" -------------------------------------------------------------------------
-
-syntax on
 filetype plugin indent on
-set showmatch
-set foldmethod=indent
+set autoindent
+set background=dark
+set cindent
+set colorcolumn=80
+set cursorline
+set expandtab
 set foldlevel=99
+set foldmethod=indent
+set hlsearch
+set ignorecase
+set incsearch
+set matchtime=1
+set nobackup
+set nowrap
+set nowritebackup
+set number
+set pastetoggle=<F2>
+set ruler
+set shiftwidth=4
+set showmatch
+set showmode
+set softtabstop=4
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set t_Co=256
+set tabstop=4
+set tags=./project.tags;project.tags
+syntax on
+
+" Airline
+" ------------------------------------------------------------------------- 
+" Using vim-airline: https://github.com/bling/vim-airline
+let g:airline_powerline_fonts=1
+set laststatus=2
+let g:airline_symbols = {}
+let g:airline#extensions#branch#enabled = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '¶ '
+let g:airline_symbols.branch = '⎇  '
+let g:airline_symbols.paste = 'Þ'
+let g:airline#extensions#whitespace#enabled = 1
+
+" Colors
+" -------------------------------------------------------------------------
+colorscheme solarized
+
+" Git
+" -------------------------------------------------------------------------
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>ga :Git add %<CR>
+nmap <Leader>gp :Git add -p<CR>
+nmap <Leader>gp :Git checkout -p<CR>
+nmap <Leader>gc :Gcommit -v<CR>
+nmap <Leader>go :Git checkout
+nmap <Leader>gn :GitGutterNextHunk<CR>
+nmap <Leader>gN :GitGutterPrevHunk<CR>
+
+" Netrw Configuration 
+" -------------------------------------------------------------------------
+"  Turn off top banner
+let g:netrw_banner = 0
+
+" PHP
+" -------------------------------------------------------------------------
 let php_folding = 1
+
+" phpfmt Configuration
+" -------------------------------------------------------------------------
+let g:phpfmt_update_on_open = 0
+let g:phpfmt_enable_default_mapping = 0
+let g:phpfmt_on_save = 0
+let g:phpfmt_config = expand('~') . '/.php.tools.ini'
+
+" Syntastic
+" -------------------------------------------------------------------------
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_php_phpcs_args = "--standard=PSR2"
+
+" Tagbar
+" ------------------------------------------------------------------------- 
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
+
+" Unite
+" ------------------------------------------------------------------------- 
+let g:unite_redraw_hold_candidates = 50000
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <nnoremapleader>r :<C-u>Unite -start-insert file_rec<CR>
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec/git<CR>
+imap <C-f> <Esc>:Unite file<CR>
+nmap _ :Unite buffer<CR>
 
 " Specific filetypes
 " -------------------------------------------------------------------------
-
 autocmd BufNewFile,BufRead,BufEnter *.sass set filetype=sass
-
 autocmd BufNewFile,BufRead *.spark set filetype=xml
 autocmd BufNewFile,BufRead parameters.yml.dist set filetype=yaml
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
@@ -236,7 +205,6 @@ autocmd BufNewFile,BufRead *.js set foldlevel=1
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,*.mdown,*.mkd,*.mkdn,README* set filetype=markdown
 autocmd BufNewFile,BufRead *.yml,*.yaml set foldmethod=indent
 autocmd Filetype gitcommit set spell
-
 autocmd FileType java setlocal noexpandtab softtabstop=0
 autocmd FileType xml setlocal noexpandtab softtabstop=0
 
@@ -247,7 +215,6 @@ endif
 
 " GUI only stuff
 " -------------------------------------------------------------------------
-
 if has('gui_running')
     set guioptions=gt
     set colorcolumn=80
@@ -261,25 +228,6 @@ elseif has('win32')
     set guifont=Consolas:h10
     set backspace=2
 endif
-
-" Workarounds and bug fixes
-" -------------------------------------------------------------------------
-
-" Set a window's attributes back to normal after NetRw borks them
-"
-" I shouldn't have to do this, but for some reason navigating up
-" directories in Netrw will cause a window to have `nomodifiable` and
-" `readonly` set. It also drops line numbers.
-"
-" I'm guessing it's inheriting those properties from the Netrw window.
-nmap <Leader>! :set nu modifiable noreadonly<CR>
-
-" Close all folds except for the current one
-"
-" This is useful when folds toggle open when adjusting strings or brackets
-nmap <Leader>O zrzmzo
-
-set tags=./project.tags;project.tags
 
 " Local Settings
 " -------------------------------------------------------------------------
