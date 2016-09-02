@@ -37,7 +37,7 @@ txtrst='\e[0m'    # Text Reset
 
 # Bash completion
 # -----------------------------------------------------------------------------
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ $(which brew) ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 elif [ -d /usr/local/etc/bash_completion.d ]; then
     source /usr/local/etc/bash_completion.d/*
