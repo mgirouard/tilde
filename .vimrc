@@ -96,7 +96,7 @@ nmap <Leader>X %%x``x
 
 filetype plugin indent on
 set autoindent
-set background=dark
+set background=light
 set cindent
 set colorcolumn=80
 set cursorline
